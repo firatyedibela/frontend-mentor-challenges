@@ -2,12 +2,14 @@
   "name": "social-links-profile",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://firatyedibela.github.io/frontend-mentor-challenges/social-links-profile",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
