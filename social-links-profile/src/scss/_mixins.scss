@@ -1,0 +1,16 @@
+@mixin link-button-styling() {
+  padding: 12px;
+  border-radius: 8px;
+  display: block;
+  border: none;
+  background-color: $grey-700;
+}
+
+@mixin text-styling($font-size, $font-weight, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-family: 'Inter';
+}
