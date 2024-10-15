@@ -53,14 +53,14 @@
   .links {
     gap: 16px;
 
-    button {
+    a {
       @include link-button-styling;
       @include text-styling(14px, 700, white);
       width: 100%;
       transition: all 0.7s;
     }
 
-    button:hover {
+    a:hover {
       background-color: $green;
       color: black;
       transition: all 0.6s;

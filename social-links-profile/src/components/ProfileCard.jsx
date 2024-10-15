@@ -1,6 +1,6 @@
 import React from 'react';
 import avatarJessica from '../assets/images/avatar-jessica.jpeg';
-import Button from './Button';
+import Link from './Link';
 
 function ProfileCard() {
   return (
@@ -17,11 +17,13 @@ function ProfileCard() {
           <p>"Front-end developer and avid reader."</p>
         </section>
         <section className="links">
-          <Button>GitHub</Button>
-          <Button>Frontend Mentor</Button>
-          <Button>LinkedIn</Button>
-          <Button>Twitter</Button>
-          <Button>Instagram</Button>
+          <Link url="https://github.com/firatyedibela">GitHub</Link>
+          <Link url="https://www.frontendmentor.io/profile/firatyedibela">
+            Frontend Mentor
+          </Link>
+          <Link url="https://www.linkedin.com">LinkedIn</Link>
+          <Link url="https://www.x.com">Twitter</Link>
+          <Link url="https://www.instagram.com">Instagram</Link>
         </section>
       </div>
     </div>

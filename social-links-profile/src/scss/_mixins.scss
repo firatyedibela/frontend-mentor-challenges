@@ -4,6 +4,8 @@
   display: block;
   border: none;
   background-color: $grey-700;
+  text-decoration: none;
+  text-align: center;
 }
 
 @mixin text-styling($font-size, $font-weight, $color) {
