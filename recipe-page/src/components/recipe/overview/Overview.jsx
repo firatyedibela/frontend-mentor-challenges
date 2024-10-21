@@ -9,7 +9,7 @@ function Overview({ title, description, preparationMinutes, cookingMinutes }) {
         <p>{description}</p>
       </div>
       <div className={styles.prepTime}>
-        <h3>Preparation Time</h3>
+        <h2>Preparation Time</h2>
         <ul>
           <li>
             <span>
