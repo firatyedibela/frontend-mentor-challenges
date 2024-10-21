@@ -1,0 +1,28 @@
+@mixin text-preset-1() {
+  font-family: 'Young Serif';
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+@mixin test-preset-2() {
+  font-family: 'Young Serif';
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+@mixin text-preset-3() {
+  font-family: 'Outfit';
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+@mixin text-preset-4() {
+  font-family: 'Outfit';
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
