@@ -16,6 +16,10 @@
     li {
       @include list-styling;
 
+      span {
+        margin-left: 16px;
+      }
+
       &::before {
         @include list-bullet-styling;
       }

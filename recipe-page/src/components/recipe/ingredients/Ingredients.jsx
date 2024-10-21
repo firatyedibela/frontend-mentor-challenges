@@ -7,7 +7,11 @@ function Ingredients({ ingredients }) {
       <h2>Ingredients</h2>
       <ul>
         {ingredients.map((ingredient, idx) => {
-          return <li key={idx}>{ingredient}</li>;
+          return (
+            <li key={idx}>
+              <span>{ingredient}</span>
+            </li>
+          );
         })}
       </ul>
     </div>
