@@ -1,0 +1,24 @@
+@use '../../../scss/mixins' as *;
+@use '../../../scss/variables' as *;
+
+.container {
+  @include flex-column(24px);
+
+  h2 {
+    @include text-preset-2;
+    font-weight: 400;
+    color: $brown-800;
+  }
+
+  ul {
+    @include flex-column(8px);
+
+    li {
+      @include list-styling;
+
+      &::before {
+        @include list-bullet-styling;
+      }
+    }
+  }
+}

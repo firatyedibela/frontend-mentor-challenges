@@ -1,0 +1,53 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+img {
+  width: 100%;
+}
+
+.details-container {
+  padding: 40px 32px;
+  @include flex-column(32px);
+
+  hr {
+    height: 1px;
+    border: none;
+    background-color: $stone-150;
+  }
+}
+
+article {
+  background-color: white;
+}
+
+@media (min-width: 640px) {
+  body {
+    padding: 128px 48px;
+  }
+
+  .details-container {
+    padding: 0;
+  }
+
+  article {
+    max-width: 616px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 24px;
+    @include flex-column(40px);
+  }
+
+  img {
+    border-radius: 12px;
+  }
+
+  .detailsContainer {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  article {
+    max-width: 736px;
+  }
+}

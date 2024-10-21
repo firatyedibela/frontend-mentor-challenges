@@ -1,4 +1,4 @@
-@import './mixins';
-@import './variables';
-@import './base';
-@import './components';
+@use './mixins' as *;
+@use './variables' as *;
+@use './base';
+@use './components';

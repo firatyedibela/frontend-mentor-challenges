@@ -8,10 +8,8 @@ import Overview from './overview/Overview';
 function Recipe(props) {
   return (
     <article>
-      <section className="imgContainer">
-        <img src={props.img} alt={'Image of a ' + props.name} />
-      </section>
-      <section className="detailsContainer">
+      <img src={props.img} alt={'Image of a ' + props.name} />
+      <section className="details-container">
         <section className="overview">
           <Overview
             title={props.title}
@@ -20,18 +18,15 @@ function Recipe(props) {
             cookingMinutes={props.cookingMinutes}
           />
         </section>
-        <br />
         <section>
-          <h2>Ingredients</h2>
           <Ingredients ingredients={props.ingredients} />
         </section>
-        <br />
+        <hr />
         <section>
-          <h2>Instructions</h2>
           <Instructions instructions={props.instructions} />
         </section>
+        <hr />
         <section>
-          <h2>Nutrition</h2>
           <Nutrition nutrition={props.nutrition} />
         </section>
       </section>

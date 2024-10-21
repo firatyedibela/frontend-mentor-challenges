@@ -1,11 +1,14 @@
+@use './variables' as *;
+
 @mixin text-preset-1() {
   font-family: 'Young Serif';
   font-size: 40px;
   line-height: 100%;
   letter-spacing: 0px;
+  font-weight: 400;
 }
 
-@mixin test-preset-2() {
+@mixin text-preset-2() {
   font-family: 'Young Serif';
   font-size: 28px;
   line-height: 100%;
@@ -25,4 +28,27 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0px;
+}
+
+@mixin list-bullet-styling() {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background-color: $rose-800;
+  border-radius: 100px;
+  margin-right: 16px;
+}
+
+@mixin flex-column($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin list-styling() {
+  padding-left: 8px;
+  color: $stone-600;
+  display: flex;
+  align-items: center;
+  @include text-preset-4;
 }

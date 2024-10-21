@@ -1,9 +1,14 @@
 import React from 'react';
+import styles from './nutrition.module.scss';
 
 function Nutrition({ nutrition }) {
   return (
-    <>
-      <p></p>
+    <div className={styles.nutritionContainer}>
+      <h2>Nutrition</h2>
+      <p>
+        The table below shows nutritional values per serving without the
+        additional fillings.
+      </p>
       <ul>
         {nutrition.map((nutrient, idx) => {
           return (
@@ -20,7 +25,7 @@ function Nutrition({ nutrition }) {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 }
 

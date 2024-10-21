@@ -1,0 +1,41 @@
+@use '../../../scss/mixins' as *;
+@use '../../../scss/variables' as *;
+
+.nutritionContainer {
+  @include flex-column(24px);
+
+  h2 {
+    @include text-preset-2;
+    color: $brown-800;
+    font-weight: 400;
+  }
+
+  p {
+    @include text-preset-4;
+  }
+
+  ul {
+    @include flex-column(12px);
+    list-style: none;
+
+    & > hr:last-child {
+      display: none;
+    }
+
+    li {
+      padding: 0 32px;
+      display: flex;
+      gap: 16px;
+      @include text-preset-4;
+
+      & > span {
+        flex: 1;
+      }
+
+      & > span:last-child {
+        font-weight: bold;
+        color: $brown-800;
+      }
+    }
+  }
+}

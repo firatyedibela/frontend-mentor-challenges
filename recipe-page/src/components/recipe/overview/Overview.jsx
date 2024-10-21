@@ -1,28 +1,35 @@
 import React from 'react';
+import styles from './overview.module.scss';
 
 function Overview({ title, description, preparationMinutes, cookingMinutes }) {
   return (
-    <>
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <div className="prepTime">
+    <div className={styles.overview}>
+      <div className={styles.generalInfo}>
+        <h1>{title}</h1>
+        <p>{description}</p>
+      </div>
+      <div className={styles.prepTime}>
         <h3>Preparation Time</h3>
         <ul>
           <li>
-            <span>Total: </span>Approximately{' '}
-            {preparationMinutes + cookingMinutes} minutes
+            <span>
+              <b>Total:</b> Approximately {preparationMinutes + cookingMinutes}{' '}
+              minutes
+            </span>
           </li>
           <li>
-            <span>Preparation: </span>
-            {preparationMinutes} minutes
+            <span>
+              <b>Preparation:</b> {preparationMinutes} minutes
+            </span>
           </li>
           <li>
-            <span>Cooking: </span>
-            {cookingMinutes} minutes
+            <span>
+              <b>Cooking:</b> {cookingMinutes} minutes
+            </span>
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 }
 

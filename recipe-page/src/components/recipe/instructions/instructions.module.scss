@@ -1,6 +1,29 @@
-@import '../../../scss/mixins';
+@use '../../../scss/mixins' as *;
+@use '../../../scss/variables' as *;
 
-.instructionContainer {
-  display: flex;
-  gap: 16px;
+.instructionsContainer {
+  @include flex-column(24px);
+
+  h2 {
+    @include text-preset-2;
+    color: $brown-800;
+    font-weight: 400;
+  }
+
+  ul {
+    list-style: none;
+    @include flex-column(8px);
+  }
+
+  li {
+    @include list-styling;
+    gap: 16px;
+    align-items: start;
+
+    .number {
+      @include text-preset-4;
+      font-weight: bold;
+      color: $brown-800;
+    }
+  }
 }
