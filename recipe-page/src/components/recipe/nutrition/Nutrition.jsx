@@ -13,14 +13,16 @@ function Nutrition({ nutrition }) {
         {nutrition.map((nutrient, idx) => {
           return (
             <>
-              <li key={idx}>
+              <li className={styles.nutrient} key={idx}>
                 <span>{nutrient.name}</span>
                 <span>
                   {nutrient.amount}
                   {nutrient.unit}
                 </span>
               </li>
-              <hr />
+              <li>
+                <hr />
+              </li>
             </>
           );
         })}
