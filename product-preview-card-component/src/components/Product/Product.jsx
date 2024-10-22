@@ -9,7 +9,6 @@ function Product(props) {
         <picture>
           <source srcSet={props.imgMobile} media="(max-width: 767px)" />
           <source srcSet={props.imgDesktop} media="(min-width: 768px)" />
-          <source />
           <img src="productDesktop" alt="Perfume product image" />
         </picture>
       </section>
