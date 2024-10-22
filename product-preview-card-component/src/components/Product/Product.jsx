@@ -14,8 +14,8 @@ function Product(props) {
       </section>
       <section className="product-info">
         <div className="info-container">
-          <p className="type">{props.type.toUpperCase()}</p>
-          <h1 className="name">{props.name}</h1>
+          <h1 className="type">{props.type.toUpperCase()}</h1>
+          <h2 className="name">{props.name}</h2>
           <p className="description">{props.description}</p>
           <div className="prices">
             <span className="price-new">${props.price}</span>
