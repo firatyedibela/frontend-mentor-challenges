@@ -1,6 +1,6 @@
 @use '../../scss/variables' as *;
 
-article {
+.product-card {
   max-width: 600px;
   display: flex;
   flex-direction: column;
@@ -8,28 +8,29 @@ article {
   height: max-content;
   border-radius: 10px;
 
-  img {
-    border-radius: 10px 10px 0px 0px;
-    max-width: 100%;
-    height: auto;
+  .product-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
   }
 
-  .info-container {
+  .product-card__text-half {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    height: 100%;
 
-    .type {
+    .product-card__ribbon {
       font-family: 'Montserrat';
       letter-spacing: 5px;
       font-size: 12px;
       font-weight: 500;
       color: $aurometal-saurus;
+      text-transform: uppercase;
     }
 
-    .name {
+    .product-card__title {
       color: $gunmetal;
       font-weight: 700;
       font-size: 2rem;
@@ -37,7 +38,7 @@ article {
       font-family: Fraunces;
     }
 
-    .description {
+    .product-card__description {
       font-family: Montserrat;
       color: $aurometal-saurus;
       line-height: 23px;
@@ -45,13 +46,13 @@ article {
       font-weight: 500;
     }
 
-    .prices {
+    .product-card__prices {
       display: flex;
       align-items: center;
       gap: 1rem;
     }
 
-    .price-new {
+    .product-card__prices {
       font-family: Fraunces;
       color: $aquamarine;
       font-size: 2rem;
@@ -59,16 +60,15 @@ article {
       font-weight: 700;
     }
 
-    .price-old {
+    s {
       font-family: Montserrat;
       font-size: 13px;
       line-height: 23px;
       color: $aurometal-saurus;
       font-weight: 500;
-      text-decoration: line-through;
     }
 
-    button {
+    .product-card__btn {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -93,24 +93,20 @@ article {
 }
 
 @media (min-width: 768px) {
-  article {
+  .product-card {
     flex-direction: row;
   }
 
-  picture,
-  section {
-    flex: 1;
+  .product-card__img-half,
+  .product-card__text-half {
+    max-width: 300px;
   }
 
-  .image-container {
-    height: 450px;
-
-    img {
-      border-radius: 10px 0 0 10px;
-    }
+  .product-card__img {
+    border-radius: 10px 0 0 10px !important;
   }
 
-  .info-container {
+  .product-card__text-half {
     padding: 2rem !important;
     justify-content: space-between;
   }
