@@ -10,7 +10,7 @@ function App() {
       <Main>
         <ul className="card-list">
           {cardData.map((card, index) => (
-            <li key={index}>
+            <li className="card-list__item" key={index}>
               <Card
                 border={card.border}
                 title={card.title}
