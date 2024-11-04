@@ -90,7 +90,8 @@
 
   .cards-list {
     grid-template-columns: repeat(4, rem(255));
-    gap: rem(30);
+    column-gap: rem(30);
+    row-gap: rem(24);
 
     &__item:first-child {
       grid-column: 1 / 3;
