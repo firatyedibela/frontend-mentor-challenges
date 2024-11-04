@@ -20,7 +20,7 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/firatyedibela/frontend-mentor-challenges/tree/main/testimonials-grid-section)
-- Live Site URL: [Live Site](https://four-card-feature-section-six-wine.vercel.app)
+- Live Site URL: [Live Site](https://testimonials-grid-section-seven-theta.vercel.appp)
 
 ## My process
 
