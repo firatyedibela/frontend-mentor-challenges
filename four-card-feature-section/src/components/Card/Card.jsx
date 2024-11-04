@@ -6,7 +6,7 @@ function Card({ border, title, description, logo }) {
     <article className={`card card--${border}`}>
       <h2 className="card__title">{title}</h2>
       <p className="card__description">{description}</p>
-      <img className="card__logo" src={logo} alt={`Logo of ${title}`} />
+      <img className="card__logo" src={logo} alt="" />
     </article>
   );
 }
