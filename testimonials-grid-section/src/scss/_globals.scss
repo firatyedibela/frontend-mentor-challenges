@@ -1,0 +1,38 @@
+@use 'sass:math';
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@function rem($pixels) {
+  @if math.is-unitless($pixels) {
+    @return math.div($pixels, 16) + rem;
+  } @else {
+    @error 'Don\'t use units when using the rem() function; only numbers.';
+  }
+}
+
+/* Variables */
+$moderate-violet: hsl(263, 55%, 52%);
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$very-dark-blackish-blue: hsl(219, 29%, 14%);
+
+$light-gray: hsl(0, 0%, 81%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Barlow Semi Condensed';
+  background-color: $light-grayish-blue;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
