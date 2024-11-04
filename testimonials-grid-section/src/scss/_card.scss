@@ -1,1 +1,81 @@
+@use './globals' as *;
 
+article.card {
+  display: flex;
+  flex-direction: column;
+  gap: rem(18);
+  height: 100%;
+
+  padding: rem(32);
+  border-radius: rem(8);
+  background-color: white;
+
+  .card-header {
+    display: flex;
+    height: rem(28);
+    align-items: center;
+    gap: rem(18);
+
+    img {
+      height: 28px;
+      width: 28px;
+      border-radius: 100px;
+    }
+
+    .personal-data {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: rem(4);
+
+      &__name {
+        font-weight: 500;
+        font-size: rem(13);
+        line-height: rem(13);
+      }
+
+      &__status-label {
+        font-weight: 500;
+        font-size: rem(11);
+        line-height: rem(11);
+        opacity: 50%;
+      }
+    }
+  }
+
+  .card__title {
+    font-weight: 600;
+    font-size: rem(20);
+  }
+
+  .card__text {
+    font-weight: 500;
+    font-size: rem(13);
+    line-height: rem(18);
+    opacity: 70%;
+  }
+}
+
+article.card--bg-violet {
+  background-color: $moderate-violet;
+}
+
+article.card--bg-grayish {
+  background-color: $very-dark-grayish-blue;
+}
+
+article.card--bg-blackish {
+  background-color: $very-dark-blackish-blue;
+}
+
+article.card--text-light {
+  color: $light-gray;
+}
+
+article.card--text-white {
+  color: white;
+}
+
+article.card--text-dark {
+  color: $very-dark-grayish-blue;
+}
