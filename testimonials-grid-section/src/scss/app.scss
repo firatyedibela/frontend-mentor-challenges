@@ -16,7 +16,7 @@
 
 .cards-list {
   display: grid;
-  grid-template-columns: rem(350);
+  grid-template-columns: minmax(rem(275), rem(350));
   justify-content: center;
   gap: rem(24);
 }
