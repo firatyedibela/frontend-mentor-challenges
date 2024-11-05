@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import './scss/_app.scss';
 
 function App() {
-  return <div>Hello world, meet landing page here</div>;
+  return <div className="container"></div>;
 }
 
 export default App;

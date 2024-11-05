@@ -1,0 +1,6 @@
+@use './globals' as *;
+@use './mixins' as *;
+
+.container {
+  @include text-preset-1;
+}

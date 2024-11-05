@@ -1,0 +1,40 @@
+@use 'sass:math';
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Convert pixels into rem */
+@function rem($pixels) {
+  @if math.is-unitless($pixels) {
+    @return math.div($pixels, 16) + rem;
+  } @else {
+    @error 'Don\'t use units when using the rem() function; only numbers.';
+  }
+}
+
+/* Custom properties */
+$cyan-600: #4d96a9;
+$cyan-300: #8fe3f9;
+$purple-600: #855fb1;
+$purple-300: #d9b8ff;
+$slate-900: #28283d;
+$slate-600: #87879d;
+$slate-300: #d1d1df;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  list-style: none;
+  font-family: 'Red Hat Display';
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
