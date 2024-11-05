@@ -28,7 +28,7 @@
   }
 
   .card__personal-data,
-  .card__quote-title {
+  .card__quote-lead {
     color: white;
   }
 }
@@ -39,7 +39,7 @@
     box-sizing: content-box;
   }
 
-  .card__quote-title {
+  .card__quote-lead {
     color: $light-grayish-blue;
   }
 }

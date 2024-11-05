@@ -12,8 +12,8 @@ function Card(props) {
         </div>
       </header>
       <blockquote className="card__quote">
-        <p className="card__quote-title">{props.title}</p>
-        <p className="card__quote-text">&#8243; {props.text} &#8243;</p>
+        <p className="card__quote-lead">{props.lead}</p>
+        <p className="card__quote-main">&#8243; {props.main} &#8243;</p>
       </blockquote>
     </article>
   );
