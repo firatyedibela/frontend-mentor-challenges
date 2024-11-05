@@ -27,9 +27,20 @@
     box-sizing: content-box;
   }
 
-  .personal-data,
-  .card__title {
+  .card__personal-data,
+  .card__quote-title {
     color: white;
+  }
+}
+
+.cards-list__item:nth-child(4) {
+  img {
+    border: rem(3) solid #733fc8;
+    box-sizing: content-box;
+  }
+
+  .card__quote-title {
+    color: $light-grayish-blue;
   }
 }
 
@@ -41,17 +52,6 @@
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-.cards-list__item:nth-child(4) {
-  img {
-    border: rem(3) solid #733fc8;
-    box-sizing: content-box;
-  }
-
-  .card__title {
-    color: $light-grayish-blue;
-  }
 }
 
 /* xs */

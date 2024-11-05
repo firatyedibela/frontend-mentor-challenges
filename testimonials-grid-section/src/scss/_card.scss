@@ -22,33 +22,39 @@ article.card {
       border-radius: 100px;
     }
 
-    .personal-data {
+    .card__personal-data {
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: rem(4);
+    }
 
-      &__name {
-        font-weight: 500;
-        font-size: rem(13);
-        line-height: rem(13);
-      }
+    .card__name {
+      font-weight: 500;
+      font-size: rem(13);
+      line-height: rem(13);
+    }
 
-      &__status-label {
-        font-weight: 500;
-        font-size: rem(11);
-        line-height: rem(11);
-        opacity: 50%;
-      }
+    .card__status-label {
+      font-weight: 500;
+      font-size: rem(11);
+      line-height: rem(11);
+      opacity: 50%;
     }
   }
 
-  .card__title {
+  .card__quote {
+    display: flex;
+    flex-direction: column;
+    gap: rem(18);
+  }
+
+  .card__quote-title {
     font-weight: 600;
     font-size: rem(20);
   }
 
-  .card__text {
+  .card__quote-text {
     font-weight: 500;
     font-size: rem(13);
     line-height: rem(18);

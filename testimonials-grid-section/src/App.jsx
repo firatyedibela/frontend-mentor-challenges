@@ -4,7 +4,7 @@ import cardsData from './data/cardsData';
 
 function App() {
   return (
-    <div class="container">
+    <div className="container">
       <main className="main ">
         <ul className="cards-list">
           {cardsData.map((data, idx) => (
