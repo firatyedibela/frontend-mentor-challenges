@@ -1,0 +1,56 @@
+@use './globals' as *;
+@use './mixins' as *;
+
+.header {
+  &__logo-section {
+    padding-top: rem(48);
+  }
+
+  &__logo {
+    width: rem(128);
+    height: rem(28);
+    margin: auto;
+  }
+
+  &__hero-section {
+    padding-top: rem(64);
+    padding-bottom: rem(32);
+    display: flex;
+    flex-direction: column;
+    gap: rem(48);
+  }
+
+  &__hero-img {
+    height: rem(160);
+    object-fit: cover;
+  }
+
+  &__hero-text-half {
+    padding-left: rem(35);
+    padding-right: rem(35);
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+
+  &__hero-title {
+    @include text-preset-1;
+    text-align: center;
+    color: $slate-900;
+    font-size: rem(42);
+  }
+
+  &__hero-description {
+    @include text-preset-4;
+    text-align: center;
+    color: $slate-600;
+    font-size: rem(16);
+  }
+
+  &__button-group {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    align-items: center;
+  }
+}

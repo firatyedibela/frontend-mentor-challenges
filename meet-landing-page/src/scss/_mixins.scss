@@ -3,7 +3,6 @@
 @mixin text-preset-1() {
   font-size: rem(64);
   font-weight: 900;
-  color: $slate-900;
   line-height: 110%;
   letter-spacing: 0;
 }
@@ -11,7 +10,6 @@
 @mixin test-preset-2() {
   font-size: rem(40);
   font-weight: 900;
-  color: $slate-900;
   line-height: 110%;
   letter-spacing: 0;
 }
@@ -19,23 +17,20 @@
 @mixin text-preset-3() {
   font-size: rem(16);
   font-weight: 900;
-  color: $cyan-600;
   line-height: 110%;
   letter-spacing: rem(4);
 }
 
-@mixin test-preset-4() {
+@mixin text-preset-4() {
   font-size: rem(18);
   font-weight: 500;
-  color: $slate-900;
-  line-height: 110%;
+  line-height: 150%;
   letter-spacing: 0;
 }
 
-@mixin test-preset-5() {
+@mixin text-preset-5() {
   font-size: rem(16);
   font-weight: 900;
   line-height: 150%;
-  color: $slate-900;
   letter-spacing: 0;
 }
