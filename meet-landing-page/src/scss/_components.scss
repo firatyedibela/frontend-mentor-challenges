@@ -33,3 +33,28 @@
 .btn--purple:hover {
   background-color: #b18bdd;
 }
+
+.number {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div:first-child {
+    width: rem(1);
+    height: rem(80);
+    background-color: $slate-300;
+  }
+
+  div:last-child {
+    width: rem(56);
+    height: rem(56);
+    color: $slate-600;
+    @include text-preset-5;
+    border: 1px solid $slate-300;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

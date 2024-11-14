@@ -1,0 +1,52 @@
+@use './mixins' as *;
+@use './globals' as *;
+
+.main {
+  padding: rem(32) rem(32) rem(64) rem(32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(64);
+
+  &__image-half {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(16);
+  }
+
+  &__img {
+    border-radius: rem(10);
+  }
+
+  &__text-half {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+    text-align: center;
+  }
+
+  &__title-group {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+
+  &__text-ribbon {
+    @include text-preset-3;
+    font-size: rem(12);
+    color: $cyan-600;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    @include text-preset-2;
+    font-size: rem(32);
+    color: $slate-900;
+  }
+
+  &__text-main {
+    @include text-preset-4;
+    font-size: rem(16);
+    color: $slate-600;
+  }
+}
