@@ -1,4 +1,3 @@
-import React from 'react';
 import Number from './Number';
 import womanVideocall from '../assets/desktop/image-woman-in-videocall.jpg';
 import womenVideochat from '../assets/desktop/image-women-videochatting.jpg';

@@ -1,0 +1,54 @@
+@use './mixins' as *;
+@use './globals' as *;
+
+.footer {
+  & > .number {
+    margin-bottom: rem(-28);
+
+    & > div:last-child {
+      background-color: white;
+    }
+  }
+
+  &__hero {
+    position: relative;
+    z-index: -1;
+    padding: rem(64) rem(32);
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    text-align: center;
+    background-image: url(/src/assets/mobile/image-footer.jpg);
+    background-size: cover;
+  }
+
+  &__hero::before {
+    position: absolute;
+    background-color: $cyan-600;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.9;
+  }
+
+  &__title {
+    @include text-preset-2;
+    font-size: rem(32);
+    color: white;
+    z-index: 2;
+  }
+
+  &__text {
+    @include text-preset-4;
+    font-size: rem(16);
+    color: white;
+    z-index: 2;
+  }
+
+  &__btn {
+    align-self: center;
+    z-index: 2;
+  }
+}
