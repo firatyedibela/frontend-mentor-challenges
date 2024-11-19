@@ -21,7 +21,7 @@ function Header() {
         <img
           className="header__hero-img-left img-desktop"
           src={heroLeft}
-          alt=""
+          alt="A hero picture containing profile pictures of several persons"
         />
         <div className="header__hero-text-half">
           <h1 className="header__hero-title">Group Chat for Everyone</h1>
@@ -41,7 +41,7 @@ function Header() {
         <img
           className="header__hero-img-right img-desktop"
           src={heroRight}
-          alt=""
+          alt="A hero picture containing profile pictures of several persons"
         />
       </section>
     </header>
