@@ -7,10 +7,10 @@ import heroRight from '../assets/desktop/image-hero-right.png';
 function Header() {
   return (
     <header className="header ">
-      <section className="header__logo-section">
+      <div className="header__logo-section">
         <img className="header__logo" src={meetLogo} alt="Meet logo" />
-      </section>
-      <section className="header__hero-section">
+      </div>
+      <div className="header__hero-section">
         <div className="header__hero-img-half">
           <img
             className="header__hero-img img-tablet"
@@ -43,7 +43,7 @@ function Header() {
           src={heroRight}
           alt="A hero picture containing profile pictures of several persons"
         />
-      </section>
+      </div>
     </header>
   );
 }
