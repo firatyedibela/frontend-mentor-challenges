@@ -8,7 +8,7 @@ function Main() {
   return (
     <main className="main">
       <Number>01</Number>
-      <section className="main__image-half">
+      <div className="main__image-half">
         <img
           className="main__img"
           src={womanVideocall}
@@ -29,8 +29,9 @@ function Main() {
           src={manTexting}
           alt="Man smiling while texting on a sofa"
         />
-      </section>
-      <section className="main__text-half">
+      </div>
+
+      <div className="main__text-half">
         <hgroup className="main__title-group">
           <p className="main__text-ribbon">Built for modern use</p>
           <h2 className="main__title">Smarter meetings, all in one place</h2>
@@ -40,7 +41,7 @@ function Main() {
           — all in one workspace. Control who can join with invite-only team
           access, data encryption, and data export.
         </p>
-      </section>
+      </div>
     </main>
   );
 }
