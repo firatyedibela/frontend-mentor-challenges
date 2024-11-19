@@ -1,21 +1,28 @@
 import React from 'react';
 import meetLogo from '../assets/logo.svg';
 import heroImage from '../assets/tablet/image-hero.png';
+import heroLeft from '../assets/desktop/image-hero-left.png';
+import heroRight from '../assets/desktop/image-hero-right.png';
 
 function Header() {
   return (
-    <header className="header">
+    <header className="header ">
       <section className="header__logo-section">
         <img className="header__logo" src={meetLogo} alt="Meet logo" />
       </section>
       <section className="header__hero-section">
         <div className="header__hero-img-half">
           <img
-            className="header__hero-img"
+            className="header__hero-img img-tablet"
             src={heroImage}
             alt="A hero picture containing profile pictures of several persons"
           />
         </div>
+        <img
+          className="header__hero-img-left img-desktop"
+          src={heroLeft}
+          alt=""
+        />
         <div className="header__hero-text-half">
           <h1 className="header__hero-title">Group Chat for Everyone</h1>
           <p className="header__hero-description">
@@ -31,6 +38,11 @@ function Header() {
             </a>
           </div>
         </div>
+        <img
+          className="header__hero-img-right img-desktop"
+          src={heroRight}
+          alt=""
+        />
       </section>
     </header>
   );

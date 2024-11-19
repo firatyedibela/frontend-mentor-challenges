@@ -1,36 +1,78 @@
 @use './globals' as *;
 
 @mixin text-preset-1() {
-  font-size: rem(64);
   font-weight: 900;
   line-height: 110%;
   letter-spacing: 0;
+
+  // Mobile
+  font-size: rem(40);
+
+  // Tablet
+  @media (min-width: rem(768)) {
+    font-size: rem(48);
+  }
+
+  // Desktop
+  @media (min-width: rem(1440)) {
+    font-size: rem(64);
+  }
 }
 
 @mixin text-preset-2() {
-  font-size: rem(40);
   font-weight: 900;
   line-height: 110%;
   letter-spacing: 0;
+
+  // Mobile
+  font-size: rem(32);
+
+  // Tablet
+  @media (min-width: rem(768)) {
+    font-size: rem(36);
+  }
+
+  // Desktop
+  @media (min-width: rem(1440)) {
+    font-size: rem(40);
+  }
 }
 
 @mixin text-preset-3() {
-  font-size: rem(16);
   font-weight: 900;
   line-height: 110%;
   letter-spacing: rem(4);
+
+  // Mobile
+  font-size: rem(12);
+
+  // Tablet
+  @media (min-width: rem(768)) {
+    font-size: rem(14);
+  }
+
+  // Desktop
+  @media (min-width: rem(1440)) {
+    font-size: rem(16);
+  }
 }
 
 @mixin text-preset-4() {
-  font-size: rem(18);
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 0;
+
+  font-size: rem(16);
+
+  // Desktop
+  @media (min-width: rem(1440)) {
+    font-size: rem(18);
+  }
 }
 
 @mixin text-preset-5() {
-  font-size: rem(16);
   font-weight: 900;
   line-height: 150%;
   letter-spacing: 0;
+  font-size: rem(16);
 }
