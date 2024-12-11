@@ -1,0 +1,240 @@
+@use './globals' as *;
+@use './variables' as *;
+@use './functions' as *;
+
+.card {
+  max-width: rem(327);
+  display: flex;
+  flex-direction: column;
+  border-radius: rem(10);
+  background-color: white;
+  box-shadow: 0 40px 40px -10px rgba(201, 213, 225, 0.5);
+  position: relative;
+
+  &__image-half {
+    margin-bottom: rem(36);
+  }
+
+  &__img {
+    height: rem(200);
+    object-position: 0 rem(-15);
+    border-radius: rem(10) rem(10) 0 0;
+  }
+
+  &__text-half {
+    padding: rem(0) rem(32);
+    padding-bottom: rem(20);
+  }
+
+  &__lead-text {
+    color: $very-dark-grayish-blue;
+    font-weight: 700;
+    line-height: rem(24);
+    letter-spacing: rem(0.2);
+    margin-bottom: rem(12);
+  }
+
+  &__main-text {
+    color: $desurated-dark-blue;
+    font-weight: 500;
+    font-size: rem(13);
+    line-height: rem(20);
+    letter-spacing: rem(0.12);
+    margin-bottom: rem(32);
+  }
+
+  &__footer-section {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+  }
+
+  .non-visible {
+    visibility: hidden;
+  }
+
+  &__share-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+
+    background-color: $very-dark-grayish-blue;
+    padding: rem(16) rem(32);
+    border-radius: 0 0 rem(10) rem(10);
+  }
+
+  &__socials-icons-container {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+  }
+
+  &__share-text {
+    font-size: rem(13);
+    line-height: rem(20);
+    letter-spacing: rem(5);
+    color: $grayish-blue;
+    text-transform: uppercase;
+  }
+
+  &__avatar {
+    width: rem(40);
+    height: rem(40);
+    border-radius: 500px;
+  }
+
+  &__author-info {
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      color: $very-dark-grayish-blue;
+      font-size: rem(13);
+      font-weight: bold;
+      line-height: rem(20);
+      letter-spacing: rem(0.12);
+    }
+
+    .date {
+      color: $grayish-blue;
+      font-size: rem(13);
+      font-weight: 500;
+      line-height: rem(20);
+      letter-spacing: rem(0.12);
+    }
+  }
+
+  &__share-btn {
+    position: relative;
+    margin-left: auto;
+    width: rem(32);
+    height: rem(32);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $light-grayish-blue;
+
+    /* Removes the highlight effect */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &__share-btn--active {
+    background-color: $desurated-dark-blue;
+  }
+
+  &__share-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(15);
+    height: rem(13);
+    filter: invert(55%) sepia(4%) saturate(2112%) hue-rotate(175deg)
+      brightness(89%) contrast(87%);
+  }
+
+  &__share-img--active {
+    // HOW TO CHANGE TO COLOR OF AN SVG WITH CSS
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+      brightness(102%) contrast(102%);
+  }
+}
+
+@media (min-width: rem(1024)) {
+  .container {
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .card {
+    max-width: rem(730);
+    flex-direction: row;
+    gap: 0;
+
+    &__image-half {
+      margin: 0;
+    }
+
+    &__img {
+      width: rem(285);
+      height: rem(280);
+      border-radius: rem(10) 0 0 rem(10);
+
+      /* Reset Position */
+      object-position: 0;
+    }
+
+    &__text-wrapper {
+      padding: 0;
+    }
+
+    &__text-half {
+      padding: rem(32) rem(40);
+    }
+
+    &__lead-text {
+      font-size: rem(20);
+      line-height: rem(28);
+      letter-spacing: rem(0.25);
+    }
+
+    &__main-text {
+      margin-bottom: rem(20);
+    }
+
+    &__footer-section {
+      padding: 0;
+      height: auto;
+      margin: 0;
+    }
+
+    &__avatar,
+    &__share-text {
+      margin-left: 0;
+    }
+
+    &__share-btn {
+      margin-right: 0;
+    }
+
+    &__share-section {
+      flex-direction: column;
+      background: none;
+    }
+
+    &__socials-icons-container {
+      background-color: $very-dark-grayish-blue;
+      padding: rem(18) rem(36);
+      border-radius: rem(10);
+    }
+
+    &__share-icons-desktop {
+      position: absolute;
+      top: rem(129);
+      left: rem(550);
+      width: rem(248);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__share-icons-desktop::after {
+      content: '';
+      height: 10px;
+      width: 10px;
+      border-top: 12px solid $very-dark-grayish-blue;
+      width: 24px;
+
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

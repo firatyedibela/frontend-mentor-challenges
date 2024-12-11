@@ -1,0 +1,78 @@
+@use './functions' as *;
+@use './variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Manrope:wght@200..800&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $light-grayish-blue;
+  font-family: Manrope;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: rem(24);
+  padding-right: rem(24);
+  padding-top: rem(74);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* xs */
+@media (min-width: rem(475)) {
+  .container {
+    max-width: rem(475);
+  }
+}
+
+/* sm */
+@media (min-width: rem(640)) {
+  .container {
+    max-width: rem(640);
+  }
+}
+
+/* md */
+@media (min-width: rem(768)) {
+  .container {
+    max-width: rem(768);
+  }
+}
+
+/* lg */
+@media (min-width: rem(1024)) {
+  .container {
+    max-width: rem(1024);
+  }
+}
+
+/* xl */
+@media (min-width: rem(1280)) {
+  .container {
+    max-width: rem(1280);
+  }
+}
+
+/* 2xl */
+@media (min-width: rem(1536)) {
+  .container {
+    max-width: rem(1536);
+  }
+}
