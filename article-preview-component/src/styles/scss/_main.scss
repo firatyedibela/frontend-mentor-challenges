@@ -26,15 +26,16 @@
     padding-bottom: rem(20);
   }
 
-  &__lead-text {
+  &__title {
     color: $very-dark-grayish-blue;
     font-weight: 700;
     line-height: rem(24);
     letter-spacing: rem(0.2);
     margin-bottom: rem(12);
+    font-size: 1rem;
   }
 
-  &__main-text {
+  &__text {
     color: $desurated-dark-blue;
     font-weight: 500;
     font-size: rem(13);
@@ -43,42 +44,15 @@
     margin-bottom: rem(32);
   }
 
-  &__footer-section {
+  &__footer {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+  }
+
+  &__author {
+    display: flex;
     gap: rem(16);
-  }
-
-  .non-visible {
-    visibility: hidden;
-  }
-
-  &__share-section {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    display: flex;
-    align-items: center;
-
-    background-color: $very-dark-grayish-blue;
-    padding: rem(16) rem(32);
-    border-radius: 0 0 rem(10) rem(10);
-  }
-
-  &__socials-icons-container {
-    display: flex;
-    align-items: center;
-    gap: rem(16);
-  }
-
-  &__share-text {
-    font-size: rem(13);
-    line-height: rem(20);
-    letter-spacing: rem(5);
-    color: $grayish-blue;
-    text-transform: uppercase;
   }
 
   &__avatar {
@@ -117,13 +91,15 @@
     border-radius: 50%;
     cursor: pointer;
     background-color: $light-grayish-blue;
+    z-index: 20;
 
     /* Removes the highlight effect */
     -webkit-tap-highlight-color: transparent;
   }
 
-  &__share-btn--active {
+  &__share-btn.active {
     background-color: $desurated-dark-blue;
+    margin-bottom: rem(16);
   }
 
   &__share-img {
@@ -137,14 +113,55 @@
       brightness(89%) contrast(87%);
   }
 
-  &__share-img--active {
+  &__share-img.active {
     // HOW TO CHANGE TO COLOR OF AN SVG WITH CSS
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
       brightness(102%) contrast(102%);
   }
+
+  &__share-options {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+
+    background-color: $very-dark-grayish-blue;
+    padding: rem(22) rem(32);
+    border-radius: 0 0 rem(10) rem(10);
+    z-index: 1;
+  }
+
+  &__share-options.active {
+    visibility: visible;
+  }
+
+  &__socials-icons-container {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+  }
+
+  &__share-text {
+    font-size: rem(13);
+    line-height: rem(20);
+    letter-spacing: rem(5);
+    color: $grayish-blue;
+    text-transform: uppercase;
+  }
 }
 
-@media (min-width: rem(1024)) {
+@media (max-width: rem(768)) {
+  .card__text-half.pb-0 {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: rem(768)) {
   .container {
     min-height: 100vh;
     padding: 0;
@@ -176,53 +193,30 @@
       padding: rem(32) rem(40);
     }
 
-    &__lead-text {
+    &__title {
       font-size: rem(20);
       line-height: rem(28);
       letter-spacing: rem(0.25);
     }
 
-    &__main-text {
+    &__text {
       margin-bottom: rem(20);
     }
 
-    &__footer-section {
-      padding: 0;
-      height: auto;
+    &__share-btn.active {
       margin: 0;
     }
 
-    &__avatar,
-    &__share-text {
-      margin-left: 0;
-    }
-
-    &__share-btn {
-      margin-right: 0;
-    }
-
-    &__share-section {
-      flex-direction: column;
-      background: none;
-    }
-
-    &__socials-icons-container {
-      background-color: $very-dark-grayish-blue;
-      padding: rem(18) rem(36);
-      border-radius: rem(10);
-    }
-
-    &__share-icons-desktop {
+    &__share-options.active {
       position: absolute;
       top: rem(129);
       left: rem(550);
       width: rem(248);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      height: rem(55);
+      border-radius: 10px;
     }
 
-    &__share-icons-desktop::after {
+    &__share-options.active::after {
       content: '';
       height: 10px;
       width: 10px;
@@ -231,6 +225,11 @@
 
       border-left: 12px solid transparent;
       border-right: 12px solid transparent;
+
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 100%);
     }
   }
 }
