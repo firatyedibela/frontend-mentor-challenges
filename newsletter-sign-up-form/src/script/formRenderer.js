@@ -18,7 +18,7 @@ export function renderForm() {
         </div>
         <div class="text-half">
           <div class="info">
-            <h2 class="title">Stay updated!</h2>
+            <h1 class="title">Stay updated!</h1>
             <span class="join-text">
               Join 60,000+ product managers receiving monthly updates on:
             </span>
