@@ -1,5 +1,8 @@
 import { handleSubmit } from './formHandler';
 import succesIcon from '/assets/images/icon-success.svg';
+import listIcon from '/assets/images/icon-list.svg';
+import illustrationDesktop from '/assets/images/illustration-sign-up-desktop.svg';
+import illustrationMobile from '/assets/images/illustration-sign-up-mobile.svg';
 
 export function renderForm() {
   document.body.innerHTML = `
@@ -7,10 +10,10 @@ export function renderForm() {
         <div class="img-half">
           <picture>
             <source
-              srcset="./assets/images/illustration-sign-up-desktop.svg"
+              srcset="${illustrationDesktop}"
               media="(min-width: 1024px)"
             />
-            <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
+            <img src="${illustrationMobile}" alt="" />
           </picture>
         </div>
         <div class="text-half">
@@ -21,15 +24,15 @@ export function renderForm() {
             </span>
             <ul class="features">
               <li>
-                <img src="./assets/images/icon-list.svg" alt="" />
+                <img src="${listIcon}" alt="" />
                 <span>Product discovery and building what matters</span>
               </li>
               <li>
-                <img src="./assets/images/icon-list.svg" alt="" />
+                <img src="${listIcon}" alt="" />
                 <span>Measuring to ensure updates are a success</span>
               </li>
               <li>
-                <img src="./assets/images/icon-list.svg" alt="" />
+                <img src="${listIcon}" alt="" />
                 <span>And much more!</span>
               </li>
             </ul>
