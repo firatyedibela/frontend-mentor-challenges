@@ -1,4 +1,3 @@
-import { handleSubmit } from './script/formHandler';
+import { renderForm } from './script/formRenderer';
 
-const form = document.getElementById('form');
-form.addEventListener('submit', handleSubmit);
+renderForm();

@@ -5,7 +5,7 @@ import illustrationDesktop from '/assets/images/illustration-sign-up-desktop.svg
 import illustrationMobile from '/assets/images/illustration-sign-up-mobile.svg';
 
 export function renderForm() {
-  document.body.innerHTML = `
+  document.body.querySelector('.main').innerHTML = `
     <article class="card">
         <div class="img-half">
           <picture>
@@ -41,7 +41,7 @@ export function renderForm() {
           <form id="form" action="" novalidate>
             <p>
               <label for="email">Email address</label>
-              <input id="email" type="email" placeholder="email@company.com" />
+              <input id="email" type="email" placeholder="email@company.com" autocomplete="off" />
               <span class="error-msg hidden">Valid email required</span>
             </p>
             <button class="subscribe-btn btn" type="submit">
@@ -73,7 +73,7 @@ export function renderSuccess(email) {
       <button class="btn dismiss-btn">Dismiss Message</button>
     </article>`;
 
-  document.body.innerHTML = HTML;
+  document.body.querySelector('.main').innerHTML = HTML;
 
   document.querySelector('.dismiss-btn').addEventListener('click', renderForm);
 }
