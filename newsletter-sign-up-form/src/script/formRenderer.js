@@ -1,4 +1,5 @@
 import { handleSubmit } from './formHandler';
+import succesIcon from '/assets/images/icon-success.svg';
 
 export function renderForm() {
   document.body.innerHTML = `
@@ -57,7 +58,7 @@ export function renderSuccess(email) {
     <article class="success-card">
       <img
         class="success-icon"
-        src="./assets/images/icon-success.svg"
+        src="${succesIcon}"
         alt="An icon representing success"
       />
       <h2 class="title-success title">Thanks for subscribing!</h2>
