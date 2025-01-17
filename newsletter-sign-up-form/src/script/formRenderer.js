@@ -45,7 +45,7 @@ export function renderForm() {
               <span class="error-msg hidden">Valid email required</span>
             </p>
             <button class="subscribe-btn btn" type="submit">
-              Subscribe to monthly newsletter
+              <span>Subscribe to monthly newsletter</span>
             </button>
           </form>
         </div>
@@ -70,7 +70,9 @@ export function renderSuccess(email) {
         <strong>${email}</strong>. Please open it and click the
         button inside to confirm your subscription
       </p>
-      <button class="btn dismiss-btn">Dismiss Message</button>
+      <button class="btn dismiss-btn">
+        <span>Dismiss Message</span>
+      </button>
     </article>`;
 
   document.body.querySelector('.main').innerHTML = HTML;
