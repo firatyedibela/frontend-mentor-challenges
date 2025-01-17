@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: zabar;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-size: normal;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  min-height: 100vh;
+  color: hsl(234, 29%, 20%);
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  body {
+    align-items: center;
+    background-color: hsl(235, 18%, 26%);
+  }
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: white;
+  padding-bottom: 40px;
+}
+
+.text-half {
+  padding: 0 24px 0px 24px;
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.join-text {
+  line-height: 150%;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 150%;
+}
+.features li {
+  display: flex;
+  gap: 14px;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 64px;
+    padding: 24px 24px 24px 64px;
+    border-radius: 36px;
+  }
+  .text-half {
+    max-width: 376px;
+    padding: 0;
+    align-self: center;
+  }
+  .title {
+    font-size: 56px;
+  }
+}
+.success-card {
+  background-color: white;
+  padding: 24px;
+  max-width: 375px;
+  margin-top: 150px;
+}
+.success-card img {
+  margin-bottom: 40px;
+  width: 64px;
+}
+.success-card .title {
+  margin-bottom: 24px;
+}
+.success-card .info-success-text {
+  line-height: 150%;
+}
+.success-card .btn {
+  position: absolute;
+  bottom: 20px;
+  max-width: 327px;
+}
+
+@media (min-width: 1024px) {
+  .success-card {
+    max-width: 504px;
+    margin: 0;
+    border-radius: 36px;
+    padding: 48px 64px 64px 64px;
+  }
+  .success-card .info-success-text {
+    margin-bottom: 40px;
+  }
+  .success-card .btn {
+    position: static;
+    max-width: none;
+  }
+}
+.btn {
+  background-color: hsl(234, 29%, 20%);
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 150%;
+  color: white;
+  width: 100%;
+  padding: 18px 46px 14px 48px;
+  font-family: "Roboto";
+}
+
+@media (min-width: 1024px) {
+  .btn:hover {
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(180deg, rgb(255, 106, 58) 0%, rgb(255, 82, 123) 100%);
+  }
+}
+form p {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+form p label {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 150%;
+}
+form p input {
+  height: 56px;
+  padding: 16px 24px;
+  border: 1px solid rgba(25, 24, 43, 0.25);
+  border-radius: 8px;
+  outline: none;
+}
+form p input::placeholder {
+  font-size: 16px;
+  line-height: 150%;
+  opacity: 50%;
+}
+form p input.error {
+  background-color: rgba(255, 97.92, 86.7, 0.15);
+  color: hsl(4, 100%, 67%);
+  border-color: hsl(4, 100%, 67%);
+}
+form p .error-msg {
+  color: hsl(4, 100%, 67%);
+  font-size: 12px;
+  line-height: 150%;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@keyframes shake {
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
+.shake {
+  animation: shake 0.2s;
+}
+
+/*# sourceMappingURL=main.css.map */

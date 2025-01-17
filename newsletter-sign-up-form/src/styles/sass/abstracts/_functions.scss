@@ -1,0 +1,10 @@
+@use 'sass:math';
+
+// Convert pixels into rem
+@function rem($pixels) {
+  @if math.is-unitless($pixels) {
+    @return math.div($pixels, 16) + rem;
+  } @else {
+    @error 'Do not use units with rem function; only numbers.';
+  }
+}

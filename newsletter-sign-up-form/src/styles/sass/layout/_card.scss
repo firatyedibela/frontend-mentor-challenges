@@ -1,0 +1,67 @@
+@use '../abstracts/variables' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: white;
+  padding-bottom: 40px;
+}
+
+.text-half {
+  padding: 0 24px 0px 24px;
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.join-text {
+  line-height: 150%;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 150%;
+
+  li {
+    display: flex;
+    gap: 14px;
+    align-items: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 64px;
+
+    padding: 24px 24px 24px 64px;
+    border-radius: 36px;
+  }
+
+  .text-half {
+    max-width: 376px;
+    padding: 0;
+    align-self: center;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+}
